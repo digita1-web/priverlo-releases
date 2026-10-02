@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Priverlo — descargas</title>
+<meta name="description" content="Priverlo: auditoría de seguridad local-first para tu dispositivo y tu red. Sin telemetría. Descarga del APK firmado.">
+<link rel="icon" href="icon.png">
+<style>
+  :root { --fondo:#0A0E1A; --texto:#E6EDF3; --suave:#9AA7B4; --verde:#00E676; --cian:#00D9FF; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--fondo); color:var(--texto);
+         font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 20px 64px; }
+  header { display:flex; align-items:center; gap:16px; margin-bottom: 8px; }
+  img.icono { width:72px; height:72px; border-radius:16px; }
+  h1 { margin:0; font-size:2rem; letter-spacing:-.02em; }
+  .lema { color:var(--suave); margin: 0 0 24px; }
+  h2 { font-size:1.15rem; margin: 32px 0 8px; }
+  a { color: var(--cian); }
+  .boton { display:inline-block; background:var(--verde); color:#04150A; font-weight:700;
+           padding:14px 22px; border-radius:10px; text-decoration:none; }
+  .boton:hover { filter:brightness(1.08); }
+  .caja { background:#111726; border:1px solid #1E2637; border-radius:12px; padding:16px; margin:16px 0; }
+  code { background:#0D1424; padding:2px 6px; border-radius:6px; word-break:break-all; font-size:.85em; }
+  ul { padding-left: 20px; }
+  table { width:100%; border-collapse: collapse; margin: 8px 0; font-size:.95rem; }
+  th, td { text-align:left; padding:6px 8px; border-bottom:1px solid #1E2637; vertical-align:top; }
+  th { color:var(--suave); font-weight:600; }
+  footer { color:var(--suave); font-size:.85rem; margin-top:40px; border-top:1px solid #1E2637; padding-top:16px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img class="icono" src="icon.png" alt="Icono de Priverlo">
+    <h1>Priverlo</h1>
+  </header>
+  <p class="lema">Auditoría de seguridad <strong>local-first</strong> para tu dispositivo y tu red local.
+     Los datos se quedan en tu teléfono. Sin telemetría.</p>
+
+  <p><a class="boton" href="https://github.com/digita1-web/priverlo-releases/releases/latest">Descargar la última versión</a></p>
+  <p id="datos-version" class="lema">Versión publicada: <strong>1.0.0</strong> ·
+     <a href="version.json">version.json</a></p>
+
+  <div class="caja">
+    <strong>Antes de instalar:</strong> Android pedirá permitir la instalación desde esta fuente
+    (es una app distribuida fuera de tienda). El APK está <strong>firmado</strong>; puedes comprobar su
+    huella <code>SHA-256</code> con los datos de abajo. Al abrirla por primera vez, la app te pedirá
+    <strong>aceptar los avisos legales</strong> (y guarda la fecha en tu dispositivo).
+  </div>
+
+  <h2>Qué hace</h2>
+  <ul>
+    <li><strong>Checkup del dispositivo:</strong> root, cifrado, bloqueo de pantalla, parche de seguridad, opciones de desarrollo, ADB e instalación desde fuentes desconocidas.</li>
+    <li><strong>Privacidad de tus apps:</strong> permisos peligrosos, administradores de dispositivo y accesibilidad.</li>
+    <li><strong>Tu red local:</strong> redes visibles (nombre, dirección física, canal, seguridad) y puertos abiertos en tu equipo.</li>
+    <li><strong>Informe con puntuación</strong> y recomendaciones, guardado en el dispositivo.</li>
+  </ul>
+
+  <h2>Qué <em>no</em> hace</h2>
+  <ul>
+    <li><strong>No</strong> tiene telemetría, ni cuentas, ni envía nada a ningún servidor. La única excepción es el <em>copiloto</em>, que es <strong>opcional</strong> y con <strong>tu</strong> clave.</li>
+    <li><strong>No</strong> incluye funciones de ataque (desautenticación, <em>evil twin</em>…): esas viven en el firmware de un accesorio aparte que <strong>no</strong> se distribuye aquí.</li>
+    <li><strong>No</strong> comprueba si hay versiones nuevas por su cuenta: al no tener red, no puede. Mira en esta página.</li>
+  </ul>
+
+  <h2>Permisos y para qué</h2>
+  <table>
+    <tr><th>Permiso</th><th>Para qué</th></tr>
+    <tr><td><code>ACCESS_FINE_LOCATION</code></td><td>Android exige ubicación para poder <strong>listar las redes WiFi</strong>. La app no usa tu posición.</td></tr>
+    <tr><td><code>ACCESS_WIFI_STATE</code></td><td>Leer el estado del WiFi y sus redes.</td></tr>
+    <tr><td><code>ACCESS_NETWORK_STATE</code></td><td>Saber si hay conexión (para avisar, no para enviar nada).</td></tr>
+    <tr><td><code>INTERNET</code></td><td>Solo el copiloto, <strong>si tú lo activas</strong>. El resto funciona sin red.</td></tr>
+  </table>
+  <p class="lema">No se pide <code>QUERY_ALL_PACKAGES</code>: la app ve los paquetes con <code>&lt;queries&gt;</code>.</p>
+
+  <h2>Avisos legales</h2>
+  <ul>
+    <li><a href="legal/AVISO_ETICO.md">Aviso ético de uso</a> — audita <strong>solo</strong> tus dispositivos y tu red, o aquello para lo que tengas permiso escrito.</li>
+    <li><a href="legal/LICENSE.md">Licencia de uso (EULA)</a> — propietaria; el software se entrega «tal cual».</li>
+    <li><a href="legal/THIRD_PARTY_NOTICES.md">Avisos de terceros</a> — licencias de las dependencias.</li>
+  </ul>
+
+  <h2>Integridad de esta entrega</h2>
+  <div class="caja">
+    <table>
+      <tr><th>Fichero</th><td id="f-apk">priverlo-1.0.0.apk (54.814.364 bytes)</td></tr>
+      <tr><th>SHA-256 (APK)</th><td><code id="h-apk">ca41d800b2ad26c2c541942e0c5352cdff223c5cebbbf18c3403120486ad4f8e</code></td></tr>
+      <tr><th>SHA-256 (AAB)</th><td><code id="h-aab">c00c5cd6addb2aa98b86963f1ba4d79ccc8965333a64e1036cd14bb5d57a3152</code></td></tr>
+      <tr><th>Certificado</th><td><code>SHA-256 ba3c3c9bf1d8943c7a43e215f02dc320985284ed8480b4e6cdd30d4fb18646da</code></td></tr>
+      <tr><th>Compilado desde</th><td>commit <code>006dc3c</code> · verificado en CI (firma, etiqueta, permisos y avisos dentro del APK)</td></tr>
+    </table>
+    <p class="lema">Comprueba tu descarga:
+      <code>sha256sum priverlo-1.0.0.apk</code> debe dar el mismo valor.</p>
+  </div>
+
+  <footer>
+    Priverlo es software <strong>propietario</strong>. Este repositorio contiene <strong>solo artefactos</strong>
+    (la landing, el <code>version.json</code>, los avisos y las descargas): el código fuente no se publica aquí.
+    Fecha de publicación: 2026-10-02.
+  </footer>
+</main>
+</body>
+</html>
