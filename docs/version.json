@@ -1,27 +1,30 @@
 {
   "nombre": "Priverlo",
-  "version": "1.0.0",
-  "versionCode": 1,
+  "version": "1.0.1",
+  "versionCode": 2,
   "application_id": "com.phantomaudit.app",
   "min_sdk": 29,
   "target_sdk": 34,
-  "publicado": "2026-10-02",
-  "release_url": "https://github.com/digita1-web/priverlo-releases/releases/tag/v1.0.0",
+  "publicado": "2026-10-03",
+  "release_url": "https://github.com/digita1-web/priverlo-releases/releases/tag/v1.0.1",
   "apk": {
-    "nombre": "priverlo-1.0.0.apk",
-    "bytes": 54814364,
-    "sha256": "ca41d800b2ad26c2c541942e0c5352cdff223c5cebbbf18c3403120486ad4f8e"
+    "nombre": "priverlo-1.0.1.apk",
+    "bytes": 54814368,
+    "sha256": "e7ccca7ad2970f2ef62c3c764ef142a58576669b5df847f40aa2bfa1d12e3e37"
   },
   "aab": {
-    "nombre": "priverlo-1.0.0.aab",
-    "bytes": 52944759,
-    "sha256": "c00c5cd6addb2aa98b86963f1ba4d79ccc8965333a64e1036cd14bb5d57a3152"
+    "nombre": "priverlo-1.0.1.aab",
+    "bytes": 52945777,
+    "sha256": "d9639c59a813bb05dfd7ef6a001ae392ba18a3ce7b1943f01b8cef0995253971"
   },
   "certificado_firma_sha256": "ba3c3c9bf1d8943c7a43e215f02dc320985284ed8480b4e6cdd30d4fb18646da",
   "compilado_desde": {
-    "commit": "006dc3c",
-    "ci_run": "https://github.com/digita1-web/phantom-audit/actions/runs/37066826762",
-    "verificado": "firma (no debug), etiqueta Priverlo, permisos declarados y los 3 avisos legales dentro del APK/AAB"
+    "commit": "183afb2",
+    "ci_run": "https://github.com/digita1-web/phantom-audit/actions/runs/37079699055",
+    "verificado": "el tag v1.0.1 disparo el CI en modo RELEASE (clave real): firma (no debug), etiqueta Priverlo, permisos declarados y los 3 avisos legales dentro del APK/AAB"
   },
+  "novedades": [
+    "El dialogo «Acerca de» muestra la version real (1.0.1) en vez de un texto a mano."
+  ],
   "aviso_importante": "La app NO consulta este fichero automaticamente: no tiene red (salvo el copiloto opt-in). Es publico para que cualquiera pueda comprobar la ultima version publicada y la huella de su descarga."
 }
