@@ -26,5 +26,10 @@
   "novedades": [
     "El dialogo «Acerca de» muestra la version real (1.0.1) en vez de un texto a mano."
   ],
-  "aviso_importante": "La app NO consulta este fichero automaticamente: no tiene red (salvo el copiloto opt-in). Es publico para que cualquiera pueda comprobar la ultima version publicada y la huella de su descarga."
+  "aviso_importante": "La app consulta este fichero UNA vez al dia como mucho (HTTPS) para avisar de que hay una version nueva. No manda nada del usuario: ni identificadores, ni datos del dispositivo, ni lo auditado. Si no hay red, se queda callada. El fichero es publico para que cualquiera pueda comprobar la ultima version publicada y la huella de su descarga.",
+  "consulta_de_la_app": {
+    "cuando": "una vez al dia como maximo",
+    "como": "GET HTTPS a este fichero, sin parametros ni identificadores",
+    "si_falla": "silencio: no hay aviso y no se reintenta hasta el dia siguiente"
+  }
 }
